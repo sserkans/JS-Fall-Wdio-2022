@@ -24,3 +24,6 @@
     Command: npm install chai
 10. Install moment
     Command: npm install moment
+
+    Chropath Extension:
+    https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo
