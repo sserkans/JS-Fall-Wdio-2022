@@ -144,9 +144,8 @@ it.only('Messenger screen error', async() => {
 
     //8. Verify "Keep me signed in" is selected
 
-    const keepMeSignedInCheckBox1 = await $('span[class=""]');
-    const keepMeSignedInClicked1 = await keepMeSignedInCheckBox1.click();
-    const keepMeSignedInSelected = await keepMeSignedInClicked1.isSelected();
+    const keepMeSignedInCheckBox1 = await $('input[type=checkbox]')
+    const keepMeSignedInSelected = await keepMeSignedInCheckBox1.isSelected();
     console.log(keepMeSignedInSelected);
 
     expect(keepMeSignedInSelected,'Keep me signed in is NOT selected').to.be.true;
