@@ -15,7 +15,7 @@ const  moment  = require("moment")
  *
 */
 
-it('Verify current date is displayed on Sign-Up form', async () => {
+it.only('Verify current date is displayed on Sign-Up form', async () => {
 
     // 1. Launch https://www.facebook.com/
     await browser.url('/');
@@ -27,19 +27,19 @@ it('Verify current date is displayed on Sign-Up form', async () => {
 
     //3. To get Day Value from Birthday
 
-    const dayDropdown = await $('option=21');
+    const dayDropdown = await $('//select[@id="day"]/option[@selected]');
     const dayValue = await dayDropdown.getText();
     console.log(dayValue);
 
     //4. to get Month Value from Birthday
 
-    const monthDropdown = await $('option=Nov');
+    const monthDropdown = await $('//select[@id="month"]/option[@selected]');
     const monthValue = await monthDropdown.getText();
     console.log(monthValue);
 
     //5. to get year value from Birthday
 
-    const yearDropdown = await $('option=2022');
+    const yearDropdown = await $('//select[@id="year"]/option[@selected]');
     const yearValue = await yearDropdown.getText();
     console.log(yearValue);
 
@@ -104,7 +104,7 @@ it('Verify current date is displayed on Sign-Up form', async () => {
  * 
  */
 
-it.only('Messenger screen error', async() => {
+it('Messenger screen error', async() => {
 
     // 1. Launch https://www.facebook.com/
     await browser.url('/');
