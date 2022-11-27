@@ -15,6 +15,7 @@ class HomePage {
     async getTempValue(locator){
         await this.commands.getTextOfWebElement(locator);
     }
-
+    
+    
 }
 module.exports = HomePage;
