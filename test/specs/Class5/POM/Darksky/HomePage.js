@@ -12,9 +12,19 @@ class HomePage {
 
     // functions to interact with the web-Elements on the HomePage
 
-    async getTempValue(locator){
-        await this.commands.getTextOfWebElement(locator);
+    async getFeelsLikeTempValue(){
+       return await this.commands.getTextOfWebElement('.feels-like-text');
     }
+
+    async getLowTempValue(){
+       return  await this.commands.getTextOfWebElement('.low-temp-text');
+    }
+
+    async getHighTempValue(){
+       return await this.commands.getTextOfWebElement('.high-temp-text');
+    }
+
+    
     
     
 }

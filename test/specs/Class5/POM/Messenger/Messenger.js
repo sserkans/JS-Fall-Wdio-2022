@@ -1,6 +1,6 @@
 const Commands = require("../Commands")
 
-class messenger {
+class messengerPage {
 
     commands = new Commands();
 
@@ -11,6 +11,7 @@ class messenger {
     loginButtonLocator = 'button[name=login]';
     errorLinkLocator = '=Find your account and log in.';
     continueButtonLocator = 'button=Continue';
+    keepMeSignedInLocator2 = 'span[class=""]';
 
      // functions to interact with the web-Elements on the Messenger
 
@@ -36,9 +37,9 @@ class messenger {
      }
 
      async clickKeepMeSignedInCheckbox(){
-        await this.commands.clickWebElement(this.keepMeSignedInLocator);
+        await this.commands.clickWebElement(this.keepMeSignedInLocator2);
      }
 
 }
 
-module.exports = messenger;
+module.exports = messengerPage;
