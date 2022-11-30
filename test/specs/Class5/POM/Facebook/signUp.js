@@ -14,19 +14,19 @@ class signUp {
     // functions to interact with the web-Elements on the Sign Up form
 
     async clickCreateNewAccount() {
-        await this.commands.clickWebElement(this.createNewAccountLocator);
+       await this.commands.clickWebElement(this.createNewAccountLocator);
     }
 
     async getDayValue() {
-        await this.commands.getTextOfWebElement(this.signUpDayLocator);
+        return await this.commands.getTextOfWebElement(this.signUpDayLocator);
     }
 
     async getMonthValue() {
-        await this.commands.getTextOfWebElement(this.signUpMonthLocator);
+       return await this.commands.getTextOfWebElement(this.signUpMonthLocator);
     }
 
     async getYearValue() {
-        await this.commands.getTextOfWebElement(this.signUpYearLocator);
+       return await this.commands.getTextOfWebElement(this.signUpYearLocator);
     }
 
 }

@@ -5,7 +5,7 @@ const { expect } = require('chai');
 
 describe('Login Test Suite', () => {
     
-    it('Verify user gets error for invalid credentials', async () => {
+    it.only('Verify user gets error for invalid credentials', async () => {
         const loginPage = new LoginPage();
         const loginErrorPage = new LoginErrorPage();
 
@@ -28,19 +28,7 @@ describe('Login Test Suite', () => {
         
     });
 
-    it.only('Verify user gets error when submits empty login form', async () => {
-        const loginPage = new LoginPage();
-        const loginErrorPage = new LoginErrorPage();
-
-        // 1. Launch facebook.com
-        await browser.url('https://www.facebook.com');
-
-        // 2. Click Log In button
-        await loginPage.clickLoginInButton();
-
-        // 3. Verify error is displayed -> The email address or mobile number you entered isn't connected to an account.
-        expect(await loginErrorPage.isLoginErrorDisplayed(), 'Login error message is NOT displayed').to.be.true;
-
+    it('', () => {
         
     });
 
